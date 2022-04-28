@@ -12,6 +12,7 @@ namespace Macros
 
     class Program
     {
+        #region Setup
         [StructLayout(LayoutKind.Sequential)]
         struct KEYBDINPUT
         {
@@ -60,10 +61,10 @@ namespace Macros
         }
 
 
-        static void SendKey(ushort key, bool up = false)
+        static void SendKey(ScanCodes key, bool up = false)
         {
             KEYBDINPUT kbi = new KEYBDINPUT();
-            kbi.wScan = key;
+            kbi.wScan = (ushort)key;
             kbi.dwFlags = 1 << 3 | (uint)(up ? 1 << 1 : 0);
             INPUT input = new INPUT();
             input.inputData.Keyboard = kbi;
@@ -75,6 +76,17 @@ namespace Macros
             }
             //if (lastErr > 0) Console.WriteLine("ERROR: " + lastErr + " | key: " + key);
         }
+
+        static void ClickMouse()
+        {
+            MoveMouse(0, 0, true, false);
+        }
+
+        static void ReleaseMouse()
+        {
+            MoveMouse(0, 0, false, true);
+        }
+
         static void MoveMouse(int x, int y, bool click = false, bool release = false)
         {
             MOUSEINPUT mi = new MOUSEINPUT();
@@ -440,6 +452,8 @@ namespace Macros
             Thread.Sleep(milliseconds);
         }
 
+        #endregion
+
         static void Main(string[] args)
         {
             bool exit = false;
@@ -448,6 +462,40 @@ namespace Macros
 
                 // PUT YOUR CODE HERE
                 
+                // Example macro
+
+                if (GetKeyDown(WinVirtualKey.VK_ONE))
+                {
+                    Console.WriteLine("The number 1 key was pressed");
+
+                    // Move the mouse to the middle of the screen and click
+                    SetCursorPos(960, 540);
+                    ClickMouse();
+                    Wait(17);
+                    ClickMouse();
+                    Wait(17);
+                    ClickMouse();
+                    Wait(17);
+
+                    // Macro typing out the word "Hello"
+                    SendKey(ScanCodes.H);
+                    Wait(5);
+                    SendKey(ScanCodes.E);
+                    Wait(5);
+                    SendKey(ScanCodes.L);
+                    Wait(5);
+                    SendKey(ScanCodes.L);
+                    Wait(5);
+                    SendKey(ScanCodes.O);
+                }
+
+                if (GetKeyDown(WinVirtualKey.VK_ESCAPE))
+                {
+                    Console.WriteLine("The escape key was pressed");
+
+                    exit = true;
+                }
+
 
                 RefreshKeys();   
             }
