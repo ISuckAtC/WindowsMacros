@@ -19,7 +19,9 @@ The following methods are relevant to writing your macros:
     GetMousePosition() - This will return a point which contains the X and Y coordinate of the mouse
     There is also GetCursorPos, which is the actual DLL import, but GetMousePosition is a bit more user friendly
 
-    Wait(TIME IN MILLISECONDS) - This will wait a certain amount of time before continuing, remember that most games wont register the same button being pressed multiple times in one frame, so use this to delay your key presses so the game has a chance to see them (For example a delay of 17ms is about equivalent to a single frame in game)
+    Wait(TIME IN MILLISECONDS) - This will wait a certain amount of time before continuing, remember that most games wont 
+    register the same button being pressed multiple times in one frame, so use this to delay your key presses so the game 
+    has a chance to see them (For example a delay of 17ms is about equivalent to a single frame in game)
 
     SendKey(SCANKEY) - This will input the given key
 
