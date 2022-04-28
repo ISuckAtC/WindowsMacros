@@ -1,0 +1,13 @@
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.exe
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.deps.json
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.runtimeconfig.json
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.runtimeconfig.dev.json
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.dll
+D:\Programming\C#\Macros\bin\Debug\netcoreapp3.1\Macros.pdb
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.csprojAssemblyReference.cache
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.AssemblyInfoInputs.cache
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.AssemblyInfo.cs
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.csproj.CoreCompileInputs.cache
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.dll
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.pdb
+D:\Programming\C#\Macros\obj\Debug\netcoreapp3.1\Macros.genruntimeconfig.cache
