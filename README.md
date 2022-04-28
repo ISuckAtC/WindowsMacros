@@ -35,6 +35,9 @@ The following methods are relevant to writing your macros:
 
     RefreshKeys() - This must be at the end of the loop to check if previous held keys are released (so that KeyDown works properly)
 
+    To exit the loop (which also ends the program), just set the "exit" bool to true
+    Example exit = true;
+
 
 
 In Program.cs, in the Main method, you can write your own macros, and there will be an example there for how to write them.
