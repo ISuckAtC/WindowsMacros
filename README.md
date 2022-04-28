@@ -1,6 +1,7 @@
 This is a project for writing low latency high precision macros using WinAPI.
 
 This project is made with dotnet core 3.1, and you will need to download it if you want to build the project.
+Link: https://dotnet.microsoft.com/en-us/download/dotnet/3.1
 
 To run the project, use the command "dotnet run", and if you want an exe to run for later, you can build one with the command "dotnet publish"
 
